@@ -1,8 +1,4 @@
-import GameTemplate from './GemeTemplate'
+import GameTemplate from './GameTemplate';
 
 export default class GameArea extends GameTemplate {
-  constructor() {
-    super(row, column);
-    
-  }
 }

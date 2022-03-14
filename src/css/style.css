@@ -1,0 +1,36 @@
+body {
+  color: #999;
+  background-color: #000;
+}
+
+.gamedesk {
+  box-sizing: border-box;
+  width: 320px;
+  height: 320px;
+  margin: auto;
+  background-color: #fff;
+}
+
+.gamedesk__string {
+  background-color: #fff;
+  width: 320px;
+  height: 80px;
+  margin: auto;
+  background-color: #999;
+}
+
+.string__square {
+  display: inline-block;
+  background-image: url('../img/map-tile-center.png');
+  width: 80px;
+  height: 80px;
+}
+
+.square__imgEnemy {
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/goblin.png');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}

@@ -1,22 +1,21 @@
-export default class User {
+import Scoreboard from './Scoreboard';
+
+export default class User extends Scoreboard{
   constructor() {
-		this.squares = document.querySelectorAll('.string__square');
-    this.hit = 0;
-    this.miss = 0;
+    super();
   }
 
   getHit() {
 		Array.from(this.squares).forEach((square) => {
 			square.addEventListener('click', () => {
-				if () {
+				if (square.hasChildNodes()) {
 					this.hit += 1;
-					console.log(this.hit);
+					console.log(this.hit + 'true');
 				} else {
 					this.miss += 1;
-					console.log(this.miss);
+					console.log(this.miss + 'false');
 				}
 			});
 		});
-    
 	}
 }

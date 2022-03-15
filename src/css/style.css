@@ -1,6 +1,6 @@
 body {
   color: #999;
-  background-color: #000;
+  background-color: #000;	
 }
 
 .gamedesk {
@@ -24,6 +24,7 @@ body {
   background-image: url('../img/map-tile-center.png');
   width: 80px;
   height: 80px;
+  cursor: url('../img/hummer.png'), auto;
 }
 
 .square__imgEnemy {
@@ -36,9 +37,14 @@ body {
 }
 
 .scoreboard {
+  box-sizing: border-box;
   width: 320px;
   height: 80px;
   margin: 10px auto;
-  background-color: #fff;
+  padding: 5px;
+  text-align: left;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
   color: #000;
+  background-color: #fff;
 }

@@ -1,11 +1,14 @@
 import Enemy from './Enemy';
 import GameArea from './GameArea';
-import User from './User';
+import HitAndMiss from './HitAndMiss';
 
 const gameArea = new GameArea(4, 4);
 gameArea.createColumn();
 gameArea.createRow();
+
 const enemy = new Enemy();
 enemy.addEnemy();
-const user = new User();
-user.getHit();
+
+const hitAndMiss = new HitAndMiss();
+hitAndMiss.getHit();
+hitAndMiss.showScore();

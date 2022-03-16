@@ -27,7 +27,7 @@ export default class Scoreboard {
   resetScore() {
     if (this.miss === 5) {
       // eslint-disable-next-line no-alert
-      alert(`Выпроиграли! Ваш счет: ${this.hit}`);
+      alert(`Вы проиграли! Ваш счет: ${this.hit}`);
       this.hit = 0;
       this.miss = 0;
     }

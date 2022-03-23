@@ -1,14 +1,17 @@
 import Enemy from './Enemy';
-import GameArea from './GameArea';
+import GameTemplate from './GameTemplate';
 import HitAndMiss from './HitAndMiss';
+import Scoreboard from './Scoreboard';
 
-const gameArea = new GameArea(4, 4);
-gameArea.createColumn();
-gameArea.createRow();
+const gameTemplate = new GameTemplate(4, 4);
+gameTemplate.createGameDesk();
 
-const enemy = new Enemy();
-enemy.addEnemy();
+const scorebord = new Scoreboard();
+scorebord.showScore();
 
 const hitAndMiss = new HitAndMiss();
 hitAndMiss.getHit();
-hitAndMiss.showScore();
+
+const enemy = new Enemy();
+enemy.addEnemy();
+enemy.removeEnemy();

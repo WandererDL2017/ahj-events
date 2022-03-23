@@ -9,6 +9,7 @@ body {
   height: 320px;
   margin: auto;
   background-color: #fff;
+  cursor: url('../img/min-hummer.png'), auto;
 }
 
 .gamedesk__string {
@@ -24,7 +25,6 @@ body {
   background-image: url('../img/map-tile-center.png');
   width: 80px;
   height: 80px;
-  cursor: url('../img/hummer.png'), auto;
 }
 
 .square__imgEnemy {

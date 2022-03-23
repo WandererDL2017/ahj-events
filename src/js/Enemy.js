@@ -1,20 +1,23 @@
-import GameArea from './GameArea';
-
-export default class Enemy extends GameArea {
+export default class Enemy {
   constructor() {
-    super();
     this.enemy = document.createElement('div');
-    this.allRows = document.querySelectorAll('.string__square');
-    this.arrayRows = [];
-    this.numberRow = 0;
+    this.squares = document.querySelectorAll('.string__square');
   }
 
   addEnemy() {
     this.enemy.classList.add('square__imgEnemy');
-    this.arrayRows = Array.from(this.allRows);
+    const arraySquares = Array.from(this.squares);
     setInterval(() => {
-      this.numberRow = Math.floor(Math.random() * this.arrayRows.length);
-      this.arrayRows[this.numberRow].appendChild(this.enemy);
+      const numberSquare = Math.floor(Math.random() * arraySquares.length);
+      arraySquares[numberSquare].appendChild(this.enemy);
     }, 1000);
+  }
+
+  removeEnemy() {
+    Array.from(this.squares).forEach((square) => {
+      if (square.hasChildNodes()) {
+        square.removeChild(square.firstChild);
+      }
+    });
   }
 }

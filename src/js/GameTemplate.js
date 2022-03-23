@@ -3,25 +3,29 @@ export default class GameTemplate {
     this.rowLength = rowLength;
     this.columnLength = columnLength;
     this.gameDesk = document.querySelector('.gamedesk');
-    this.columns = null;
   }
 
   createColumn() {
     for (let j = 0; j < this.rowLength; j += 1) {
-      this.column = document.createElement('div');
-      this.column.classList.add('gamedesk__string');
-      this.gameDesk.appendChild(this.column);
+      const column = document.createElement('div');
+      column.classList.add('gamedesk__string');
+      this.gameDesk.appendChild(column);
     }
   }
 
   createRow() {
-    this.columns = document.querySelectorAll('.gamedesk__string');
-    Array.from(this.columns).forEach((column) => {
+    const columns = document.querySelectorAll('.gamedesk__string');
+    Array.from(columns).forEach((column) => {
       for (let i = 0; i < this.columnLength; i += 1) {
-        this.squer = document.createElement('div');
-        this.squer.classList.add('string__square');
-        column.appendChild(this.squer);
+        const squer = document.createElement('div');
+        squer.classList.add('string__square');
+        column.appendChild(squer);
       }
     });
+  }
+
+  createGameDesk() {
+    this.createColumn();
+    this.createRow();
   }
 }

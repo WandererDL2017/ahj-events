@@ -3,11 +3,39 @@ body {
   background-color: #000;	
 }
 
-.gamedesk {
+.play-field {
   box-sizing: border-box;
+  position: relative;
   width: 320px;
   height: 320px;
   margin: auto;
+}
+
+.game-menu {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: antiquewhite;
+  cursor: default;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn {
+  display: block;
+  margin: 50% auto;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: rgb(255, 0, 0);
+}
+
+.gamedesk {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   background-color: #fff;
   cursor: url('../img/min-hummer.png'), auto;
 }

@@ -1,35 +1,26 @@
-export default class HitAndMiss {
+import Scoreboard from './Scoreboard';
+
+export default class HitAndMiss extends Scoreboard {
   constructor() {
-    this.gamedesk = document.querySelector('.gamedesk');
-    this.hit = document.querySelector('.count_hit');
-    this.miss = document.querySelector('.count_miss');
+    super();
+    this.countHit = 0;
+    this.countMiss = 0;
+  }
+
+  getMiss() {
+    this.countMiss += 1;
+    super.showMiss(this.countMiss);
   }
 
   getHit() {
-    let countHit = 0;
-    let countMiss = 0;
-    let interval = setInterval(() => {
-      countMiss += 1;
-      this.miss.innerHTML = countMiss;
-    }, 1500);
+    this.countHit += 1;
+    super.showHit(this.countHit);
+  }
 
-    this.gamedesk.addEventListener('click', (e) => {
-      if (e.target.className === 'square__imgEnemy') {
-        clearInterval(interval);
-        countHit += 1;
-        this.hit.innerHTML = countHit;
-        e.target.remove();
-        interval = setInterval(() => {
-          countMiss += 1;
-          this.miss.innerHTML = countMiss;
-          if (this.miss.innerHTML === '5') {
-            countHit = 0;
-            countMiss = 0;
-            this.miss.innerHTML = 0;
-            this.hit.innerHTML = 0;
-          }
-        }, 1000);
-      }
-    });
+  endGame() {
+    this.countHit = 0;
+    this.countMiss = 0;
+    super.showHit(0);
+    super.showMiss(0);
   }
 }
